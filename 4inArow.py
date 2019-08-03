@@ -24,7 +24,7 @@ while quit == False:
             char = 'X'
 
         print(board)
-        
+
         value = input('\n ' + name + '\'s turn : ')
 
         if (value < 0) + (value > 6):
@@ -34,9 +34,13 @@ while quit == False:
                 print('\n Invalid Entry : ')
             else:
                 board[value][uplayer[value]] = char
+                turn += 1
+                uplayer[value] -= 1
+                
+
 
     if win == True:
-        if turn % 2 == 0:
+        if turn % 2 != 0:
             print('\n ' + name1 + 'won the match !!!\n')
         else:
             print('\n ' + name2 + 'won the match !!!\n')
