@@ -57,13 +57,8 @@ while quit == False:
                                 win = True
 
     if win == True:
-        print(board[0])
-        print(board[1])
-        print(board[2])
-        print(board[3])
-        print(board[4])
-        print(board[5])
-        print(board[6])
+        for i in range(7):
+            print(board[i])
 
         if turn % 2 != 0:
             print('\n ' + name1 + 'won the match !!!\n')
