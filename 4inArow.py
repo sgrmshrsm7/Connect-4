@@ -33,13 +33,32 @@ while quit == False:
             if uplayer[value] < 0:
                 print('\n Invalid Entry : ')
             else:
-                board[value][uplayer[value]] = char
+                board[uplayer[value]][value] = char
                 turn += 1
                 uplayer[value] -= 1
-                
 
+                for i in range(7):
+                    for j in range(4):
+                        if board[i][j] == board[i][j + 1] == board[i][j + 2] == board[i][j + 3]:
+                            if board[i][j] != ' ':
+                                win = True
+                        elif board[j][i] == board[j + 1][i] == board[j + 2][i] == board[j + 3][i]:
+                            if board[i][j] != ' ':
+                                win = True
+                for i in range(4):
+                    for j in range(4):
+                        if board[i][j] == board[i + 1][j + 1] == board[i + 2][j + 2] == board[i + 3][j + 3]:
+                            if board[i][j] != ' ':
+                                win = True
+                for i in range(3 , 7):
+                    for j in range(4):
+                        if board[i][j] == board[i - 1][j + 1] == board[i - 2][j + 2] == board[i - 3][j + 3]:
+                            if board[i][j] != ' ':
+                                win = True
 
     if win == True:
+        print(board)
+
         if turn % 2 != 0:
             print('\n ' + name1 + 'won the match !!!\n')
         else:
@@ -47,6 +66,6 @@ while quit == False:
     else:
         print("\n Match drawn !!!\n")
 
-    choice = str(raw_input("Enter q for quit : "))
+    choice = str(raw_input("Enter q for quit, any other character to continue : "))
     if choice == 'q':
         quit = True
