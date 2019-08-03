@@ -12,7 +12,11 @@ while quit == False:
     win = False
 
     while win == False:
-        pass
+        if turn % 2 == 0:
+            name = name1
+        else:
+            name = name2
+        value = input('\n ' + name + '\'s turn : ')
 
     if win == True:
         if turn % 2 == 0:
@@ -21,7 +25,7 @@ while quit == False:
             print('\n ' + name2 + 'won the match !!!\n')
     else:
         print("\n Match drawn !!!\n")
-        
+
     choice = str(raw_input("Enter q for quit : "))
     if choice == 'q':
         quit = True
