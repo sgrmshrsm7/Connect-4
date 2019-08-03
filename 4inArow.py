@@ -23,7 +23,13 @@ while quit == False:
             name = name2
             char = 'X'
 
-        print(board)
+        print(board[0])
+        print(board[1])
+        print(board[2])
+        print(board[3])
+        print(board[4])
+        print(board[5])
+        print(board[6])
 
         value = input('\n ' + name + '\'s turn : ')
 
