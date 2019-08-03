@@ -23,6 +23,8 @@ while quit == False:
             name = name2
             char = 'X'
 
+        print(board)
+        
         value = input('\n ' + name + '\'s turn : ')
 
         if (value < 0) + (value > 6):
