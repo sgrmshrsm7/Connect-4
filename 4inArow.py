@@ -43,7 +43,7 @@ while quit == False:
                             if board[i][j] != ' ':
                                 win = True
                         elif board[j][i] == board[j + 1][i] == board[j + 2][i] == board[j + 3][i]:
-                            if board[i][j] != ' ':
+                            if board[j][i] != ' ':
                                 win = True
                 for i in range(4):
                     for j in range(4):
