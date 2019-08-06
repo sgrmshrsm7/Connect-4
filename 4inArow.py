@@ -23,7 +23,9 @@ while quit == False:
             name = name2
             char = 'X'
         for i in range(7):
-            print(board[i])
+            line = '|'
+            for j in board[i]:
+                line = line + j + '|'
 
         value = input('\n ' + name + '\'s turn : ')
 
