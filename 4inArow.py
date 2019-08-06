@@ -23,17 +23,15 @@ while quit == False:
             name = name2
             char = 'X'
         for i in range(7):
-            line = '|'
-            for j in board[i]:
-                line = line + j + '|'
+            print(board[i])
 
         value = input('\n ' + name + '\'s turn : ')
 
         if (value < 0) + (value > 6):
-            print('\n Invalid Entry : ')
+            print('\n Invalid Entry')
         else:
             if uplayer[value] < 0:
-                print('\n Invalid Entry : ')
+                print('\n Invalid Entry')
             else:
                 board[uplayer[value]][value] = char
                 turn += 1
