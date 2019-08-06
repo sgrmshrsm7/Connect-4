@@ -61,9 +61,9 @@ while quit == False:
             print(board[i])
 
         if turn % 2 != 0:
-            print('\n ' + name1 + 'won the match !!!\n')
+            print('\n ' + name1 + ' won the match !!!\n')
         else:
-            print('\n ' + name2 + 'won the match !!!\n')
+            print('\n ' + name2 + ' won the match !!!\n')
     else:
         print("\n Match drawn !!!\n")
 
